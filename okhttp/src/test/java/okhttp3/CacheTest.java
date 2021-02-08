@@ -1397,7 +1397,7 @@ public final class CacheTest {
     // Serve a response with a non-standard date format that OkHttp supports.
     Date lastModifiedDate = new Date(System.currentTimeMillis() + TimeUnit.HOURS.toMillis(-1));
     Date servedDate = new Date(System.currentTimeMillis() + TimeUnit.HOURS.toMillis(-2));
-    DateFormat dateFormat = new SimpleDateFormat("EEE dd-MMM-YYYY HH:mm:ss z", Locale.US);
+    DateFormat dateFormat = new SimpleDateFormat("EEE dd-MMM-yyyy HH:mm:ss z", Locale.US);
     dateFormat.setTimeZone(TimeZone.getTimeZone("America/New_York"));
     String lastModifiedString = dateFormat.format(lastModifiedDate);
     String servedString = dateFormat.format(servedDate);
